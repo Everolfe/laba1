@@ -85,6 +85,14 @@ public class Complex {
         return this;
     }
 
+    public Complex cube() {
+        double real = re * re * re - 3 * re * im * im;
+        double imag = 3 * re * re * im - im * im * im;
+        re = real;
+        im = imag;
+        return this;
+    }
+
     /**
      * Square of Complex object's length, we're using square of length to 
      * eliminate the computation of square root
